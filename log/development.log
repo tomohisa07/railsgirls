@@ -1,0 +1,441 @@
+Started GET "/" for ::1 at 2020-03-12 21:13:02 +0900
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.8ms | Allocations: 482)
+Completed 200 OK in 38ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 2871)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIdeas (20200312121603)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ideas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "picture" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200312121603"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-12 12:20:20.220080"], ["updated_at", "2020-03-12 12:20:20.220080"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ideas" for ::1 at 2020-03-12 21:22:48 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1549)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/t.sakuma/Documents/GitHub/projects/railsgirls/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.42.0
+Time: 2838ms
+Built at: 2020/03/12 21:22:54
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 6230ms (Views: 6193.4ms | ActiveRecord: 0.7ms | Allocations: 25307)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-12 21:23:16 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 54.5ms | Allocations: 7909)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 56.5ms | Allocations: 8264)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 62.9ms | ActiveRecord: 1.7ms | Allocations: 15997)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:24:57 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 8.9ms | Allocations: 3063)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3541)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 34.7ms | ActiveRecord: 0.8ms | Allocations: 16171)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:25:02 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 6.9ms | Allocations: 903)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 5013)
+
+
+Started GET "/ideas" for ::1 at 2020-03-13 20:25:04 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 934)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.4ms | Allocations: 5110)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:25:08 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 1.7ms | Allocations: 900)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 5016)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:26:14 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.1ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1597)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 6555)
+
+
+Started GET "/" for ::1 at 2020-03-13 20:26:16 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 189)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 1029)
+
+
+Started GET "/" for ::1 at 2020-03-13 20:26:16 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 281)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 1200)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:26:28 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.2ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 6523)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:36:32 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 3.5ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6543)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:36:43 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.6ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 6538)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:36:57 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.6ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 6548)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:38:06 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 4.0ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 6552)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:39:44 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.4ms | Allocations: 903)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 10747)
+
+
+Started GET "/ideas" for ::1 at 2020-03-13 20:39:47 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 5048)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:39:53 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 3.1ms | Allocations: 900)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 992)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 5009)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-13 20:42:00 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.1ms | Allocations: 1247)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 6568)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-14 01:35:42 +0900
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 31.4ms | Allocations: 3407)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 36.9ms | Allocations: 3885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 120.8ms | ActiveRecord: 0.6ms | Allocations: 20495)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-03-14 01:49:01 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (Duration: 18.1ms | Allocations: 3888)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 7.9ms | Allocations: 925)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 34.7ms | Allocations: 7352)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 8804)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-03-14 01:49:35 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (Duration: 29.0ms | Allocations: 3858)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 10.4ms | Allocations: 690)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 51.7ms | Allocations: 7062)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 8402)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-14 01:51:12 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 4.3ms | Allocations: 1275)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1621)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 6617)
+
+
+Started POST "/ideas" for ::1 at 2020-03-14 01:51:38 +0900
+Processing by IdeasController#create as HTML
+  Parameters: {"authenticity_token"=>"1ptIJr9cdhq22w0wouomZEiRRSG92EjMVdQ+7k7W/CmrwaJp3I+Q2Qj8c6KLMlYDV6ey5bwOcoTmDCvILpHJiA==", "idea"=>{"name"=>"sakutomo", "description"=>"New Idea", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f83f88db4f8 @tempfile=#<Tempfile:/var/folders/6n/9qcwr02j6zqgjxlqc5r93t1h0000gn/T/RackMultipart20200314-3732-140akw.png>, @original_filename="FireShot Capture 002 - Sakutomo Studio. - sakutomo07.github.io.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"idea[picture]\"; filename=\"FireShot Capture 002 - Sakutomo Studio. - sakutomo07.github.io.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Idea"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:30:in `block in create'
+  [1m[36mIdea Create (1.9ms)[0m  [1m[32mINSERT INTO "ideas" ("name", "description", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "sakutomo"], ["description", "New Idea"], ["picture", "FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"], ["created_at", "2020-03-13 16:51:38.220192"], ["updated_at", "2020-03-13 16:51:38.220192"]]
+  ↳ app/controllers/ideas_controller.rb:30:in `block in create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/ideas/1
+Completed 302 Found in 31ms (ActiveRecord: 3.7ms | Allocations: 10174)
+
+
+Started GET "/ideas/1" for ::1 at 2020-03-14 01:51:38 +0900
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:67:in `set_idea'
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 399)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 5541)
+
+
+Started GET "/" for ::1 at 2020-03-14 01:52:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.2ms | Allocations: 189)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 1017)
+
+
+Started GET "/" for ::1 at 2020-03-14 01:54:30 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/ideas" for ::1 at 2020-03-14 01:54:30 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 22.6ms | ActiveRecord: 1.7ms | Allocations: 10772)
+
+
+Started GET "/pages/info" for ::1 at 2020-03-14 17:56:16 +0900
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#info as HTML
+  Rendering pages/info.html.erb within layouts/application
+  Rendered pages/info.html.erb within layouts/application (Duration: 2.6ms | Allocations: 202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 149.7ms | ActiveRecord: 0.0ms | Allocations: 21704)
+
+
+Started GET "/ideas" for ::1 at 2020-03-14 17:56:43 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 16.4ms | ActiveRecord: 2.0ms | Allocations: 11390)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-14 17:56:47 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 21.5ms | Allocations: 3074)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 3429)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 7684)
+
+
+Started GET "/" for ::1 at 2020-03-14 17:56:52 +0900
+Started GET "/ideas" for ::1 at 2020-03-14 17:56:52 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 4906)
+
+
+Started GET "/ideas" for ::1 at 2020-03-14 17:56:53 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 808)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.4ms | Allocations: 4894)
+
+
+Started GET "/" for ::1 at 2020-03-16 08:29:51 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ideas" for ::1 at 2020-03-16 08:29:51 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 5489)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 130ms (Views: 117.3ms | ActiveRecord: 1.0ms | Allocations: 30187)
+
+
+Started GET "/" for ::1 at 2020-03-16 08:29:56 +0900
+Started GET "/ideas" for ::1 at 2020-03-16 08:29:56 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 826)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms | Allocations: 5076)
+
+
+Started GET "/" for ::1 at 2020-03-16 08:29:59 +0900
+Started GET "/ideas" for ::1 at 2020-03-16 08:29:59 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 817)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 5064)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-16 08:30:12 +0900
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 28.2ms | Allocations: 3132)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 30.2ms | Allocations: 3492)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 7904)
+
+
+Started GET "/ideas/1" for ::1 at 2020-03-16 08:30:30 +0900
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:67:in `set_idea'
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 387)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 14.7ms | ActiveRecord: 0.5ms | Allocations: 7753)
+
+
+Started GET "/ideas/1/edit" for ::1 at 2020-03-16 08:30:35 +0900
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:67:in `set_idea'
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 6.7ms | Allocations: 971)
+  Rendered ideas/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1226)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 0.3ms | Allocations: 6114)
+
+
+Started PATCH "/ideas/1" for ::1 at 2020-03-16 08:30:43 +0900
+Processing by IdeasController#update as HTML
+  Parameters: {"authenticity_token"=>"m0m2bkoLMjUftI9rcimCYOcp/pDwq7RDtN8UbX+T/MY7bIXBaM0I5EB0Yrbsh/w4U3gBouyYp5rAVHiJdqbbIA==", "idea"=>{"name"=>"sakutomo", "description"=>"New Idea", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007ffaeba19cd8 @tempfile=#<Tempfile:/var/folders/6n/9qcwr02j6zqgjxlqc5r93t1h0000gn/T/RackMultipart20200316-1598-1gzt5xo.png>, @original_filename="FireShot Capture 002 - Sakutomo Studio. - sakutomo07.github.io.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"idea[picture]\"; filename=\"FireShot Capture 002 - Sakutomo Studio. - sakutomo07.github.io.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Idea", "id"=>"1"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:67:in `set_idea'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ideas_controller.rb:44:in `block in update'
+  [1m[36mIdea Update (0.5ms)[0m  [1m[33mUPDATE "ideas" SET "picture" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["picture", "FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"], ["updated_at", "2020-03-15 23:30:43.482949"], ["id", 1]]
+  ↳ app/controllers/ideas_controller.rb:44:in `block in update'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ideas_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/ideas/1
+Completed 302 Found in 23ms (ActiveRecord: 3.0ms | Allocations: 4783)
+
+
+Started GET "/ideas/1" for ::1 at 2020-03-16 08:30:43 +0900
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:67:in `set_idea'
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4957)
+
+
+Started GET "/" for ::1 at 2020-03-16 08:30:45 +0900
+Started GET "/ideas" for ::1 at 2020-03-16 08:30:45 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:16
+  Rendered ideas/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 816)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.3ms | Allocations: 5058)
+
+
