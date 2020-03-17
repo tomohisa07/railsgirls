@@ -14,7 +14,12 @@ end
 group :production do
   gem 'pg'
 end
+
 gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'devise'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'

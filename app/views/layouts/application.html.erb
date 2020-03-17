@@ -10,11 +10,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <footer>
-  <div class="container">
-    Rails Girls 2020
-  </div>
-  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -31,6 +26,16 @@
         <a class="navbar-brand" href="/">The Idea app</a>
       </div>
       <div class="collapse navbar-collapse">
+        <p class="navbar-text pull-right">
+          <% if user_signed_in? %>
+            Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link' %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, class: 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, class: 'navbar-link'  %>
+          <% end %>
+        </p>
         <ul class="nav navbar-nav">
           <li class="active"><a href="/ideas">Ideas</a></li>
           <li><%= link_to 'New Idea', new_idea_path %></li>
@@ -39,7 +44,19 @@
     </div>
   </nav>
   <div class="container">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </div>
   </body>
+  <footer>
+    <div class="container">
+      Rails Girls 2020
+    </div>
+  </footer>
+
 </html>

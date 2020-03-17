@@ -614,3 +614,1105 @@ Processing by IdeasController#edit as HTML
 Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 6453)
 
 
+Started GET "/ideas" for ::1 at 2020-03-17 08:15:22 +0900
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (1.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5501)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 52.7ms | ActiveRecord: 2.6ms | Allocations: 20404)
+
+
+Started GET "/" for ::1 at 2020-03-17 08:15:24 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 08:15:24 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 817)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 4901)
+
+
+Started GET "/ideas" for ::1 at 2020-03-17 08:15:25 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 4882)
+
+
+Started GET "/ideas/1" for ::1 at 2020-03-17 08:15:32 +0900
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:71:in `set_idea'
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ? LIMIT ?[0m  [["idea_id", 1], ["LIMIT", 11]]
+  Rendered ideas/show.html.erb within layouts/application (Duration: 376.0ms | Allocations: 160800)
+Completed 500 Internal Server Error in 415ms (ActiveRecord: 2.6ms | Allocations: 169832)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `idea' for #<#<Class:0x00007fc35fb59030>:0x00007fc35f871fe8>
+Did you mean?  @idea):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-9">
+    5:     <%= image_tag idea.picture_url(:thumb) if idea.picture.present? %>
+    6:   </div>
+    7: 
+    8:   <div class="col-md-3">
+  
+app/views/ideas/show.html.erb:5
+Started GET "/ideas" for ::1 at 2020-03-17 08:15:35 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.8ms | Allocations: 4943)
+
+
+Started GET "/ideas" for ::1 at 2020-03-17 08:17:23 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 6114)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2020-03-17 08:17:25 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 4881)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2020-03-17 08:17:26 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 4866)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:26 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas/1" for ::1 at 2020-03-17 08:17:38 +0900
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:71:in `set_idea'
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 474)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 5447)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:40 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas/1" for ::1 at 2020-03-17 08:17:41 +0900
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:71:in `set_idea'
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 267)
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:41 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.2ms | Allocations: 33712)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:17:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2020-03-17 08:18:14 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 821)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 4886)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:18:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2020-03-17 08:18:15 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 4860)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:18:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-17 08:21:48 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ideas" for ::1 at 2020-03-17 08:21:48 +0900
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5479)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 42.4ms | ActiveRecord: 1.0ms | Allocations: 17221)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 08:21:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200317111401)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200317111401"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-03-17 20:17:18 +0900
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 205)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 525)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 47.9ms | Allocations: 6851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 75.5ms | ActiveRecord: 0.8ms | Allocations: 21825)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:21:06 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 2025)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 7679)
+
+
+Started POST "/users" for ::1 at 2020-03-17 20:25:49 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"RA6VpwAj8tpASn9ADQfdXrpZrh9FMQ1PS3LBOBikRIk5VH/oY/AUGf5tAdIk3605pW9Z20TnNwf4qtQeeONxKA==", "user"=>{"email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaaa@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "aaaa@gmail.com"], ["encrypted_password", "$2a$11$.Y8ZrB/gJi1CxFrdPkTXX.7JvopY1tEt/Vyz7nb6xfePrlyThd3FG"], ["created_at", "2020-03-17 11:25:50.038769"], ["updated_at", "2020-03-17 11:25:50.038769"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 194ms (ActiveRecord: 5.3ms | Allocations: 15716)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:25:50 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 20:25:50 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 5037)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 17.5ms | ActiveRecord: 1.6ms | Allocations: 15082)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 20:25:50 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2020-03-17 20:25:57 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 812)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 6464)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 20:25:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for ::1 at 2020-03-17 20:26:03 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+QLYupWaeUjwpy4ffyY0SwBNgnSoRXFrYKtJ1Br2fy6EWDL19kmfi06AUI1W/kQsH3t1sKmTSyPTc1zyerFKjw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 2952)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:26:03 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 20:26:03 +0900
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:26:03 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 534)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 7674)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:26:11 +0900
+Processing by IdeasController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:26:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1063)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 5573)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:26:12 +0900
+Processing by IdeasController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:26:12 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 134)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5545)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:26:13 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 20:26:13 +0900
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 353)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:26:13 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5553)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:26:13 +0900
+Processing by IdeasController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:26:13 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 5570)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:42:33 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/ideas" for ::1 at 2020-03-17 20:42:33 +0900
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-17 20:42:33 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms | Allocations: 13784)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-17 20:42:45 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HR6pcQSrCU57U9Mr8VMPdBRbrU15jqAHHjCWyuieZhWmEd6uvCzKr/tzshClEEyYLZvLsDzYg5Rsrf1G/nxdqA==", "user"=>{"email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaaa@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 156ms (ActiveRecord: 0.5ms | Allocations: 4330)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"HR6pcQSrCU57U9Mr8VMPdBRbrU15jqAHHjCWyuieZhWmEd6uvCzKr/tzshClEEyYLZvLsDzYg5Rsrf1G/nxdqA==", "user"=>{"email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered /Users/t.sakuma/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 144ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 5333)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-17 20:42:51 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"U+wqSJKYgaX36NvvtkEod2As14LgQkjZC1+Dal9p9zLo412XKh9CRHfIutTiAmubWeyxf6UUa0p5wujmSYvMjw==", "user"=>{"email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaaa@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 143ms (ActiveRecord: 0.2ms | Allocations: 3043)
+
+
+Started GET "/ideas" for ::1 at 2020-03-17 20:42:51 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 830)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 6448)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 20:42:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:42:54 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 10.4ms | Allocations: 1557)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 0.2ms | Allocations: 7654)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 20:42:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:43:44 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 1.8ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.2ms | Allocations: 14552)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:43:45 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 20:43:45 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 6373)
+
+
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 20:43:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:43:46 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 4.5ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 993)
+Started GET "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png" for ::1 at 2020-03-17 20:43:46 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/1/thumb_FireShot_Capture_002_-_Sakutomo_Studio._-_sakutomo07.github.io.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 48.8ms | ActiveRecord: 0.3ms | Allocations: 35900)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:44:23 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.8ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.9ms | Allocations: 6625)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:49:55 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.8ms | Allocations: 1255)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1600)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 8543)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:49:56 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 3.6ms | Allocations: 904)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 6590)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:49:57 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 20:49:57 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.8ms | Allocations: 6805)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:50:02 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 3.2ms | Allocations: 904)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 6592)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:50:52 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 1.5ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.2ms | Allocations: 15005)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:51:05 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.6ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 6586)
+
+
+Started GET "/ideas" for ::1 at 2020-03-17 20:51:06 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.9ms | Allocations: 6381)
+
+
+Started GET "/ideas" for ::1 at 2020-03-17 20:53:46 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.5ms | Allocations: 13511)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:54:09 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.5ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 6585)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:54:57 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 3.3ms | Allocations: 1255)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 8518)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:55:00 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.9ms | Allocations: 904)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 6580)
+
+
+Started GET "/" for ::1 at 2020-03-17 20:55:02 +0900
+Started GET "/ideas" for ::1 at 2020-03-17 20:55:02 +0900
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:6
+  Rendered ideas/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.7ms | Allocations: 6788)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:55:41 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 5.5ms | Allocations: 910)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.2ms | Allocations: 6599)
+
+
+Started GET "/ideas/new" for ::1 at 2020-03-17 20:56:37 +0900
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (Duration: 2.0ms | Allocations: 901)
+  Rendered ideas/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.2ms | Allocations: 16654)
+
+
